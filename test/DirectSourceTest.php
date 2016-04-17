@@ -9,7 +9,7 @@
 
 namespace lukaszmakuch\PropertySetter;
 
-use lukaszmakuch\PropertySetter\ValueSource\Directly;
+use lukaszmakuch\PropertySetter\ValueSource\UseDirectly;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -22,7 +22,7 @@ class DirectSourceTest extends PHPUnit_Framework_TestCase
     public function testDirectValueSource()
     {
         $value = "it's value";
-        $valueSource = new Directly($value);
+        $valueSource = new UseDirectly($value);
         $this->assertSame($value, $valueSource->getValue());
     }
 }

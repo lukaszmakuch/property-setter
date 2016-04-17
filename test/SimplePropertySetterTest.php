@@ -11,7 +11,7 @@ namespace lukaszmakuch\PropertySetter;
 
 use lukaszmakuch\PropertySetter\SettingStrategy\UseSetterMethod;
 use lukaszmakuch\PropertySetter\TargetSpecifier\PickByClass;
-use lukaszmakuch\PropertySetter\ValueSource\Directly;
+use lukaszmakuch\PropertySetter\ValueSource\UseDirectly;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -28,7 +28,7 @@ class SimplePropertySetterTest extends PHPUnit_Framework_TestCase
         $this->setter = new SimplePropertySetter(
             new PickByClass(TestClass::class),
             new UseSetterMethod("setFirstParam"),
-            new Directly(123)
+            new UseDirectly(123)
         );
     }
 

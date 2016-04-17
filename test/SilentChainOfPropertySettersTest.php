@@ -11,7 +11,7 @@ namespace lukaszmakuch\PropertySetter;
 
 use lukaszmakuch\PropertySetter\SettingStrategy\UseSetterMethod;
 use lukaszmakuch\PropertySetter\TargetSpecifier\PickByClass;
-use lukaszmakuch\PropertySetter\ValueSource\Directly;
+use lukaszmakuch\PropertySetter\ValueSource\UseDirectly;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -25,12 +25,12 @@ class SilentChainOfPropertySettersTest extends PHPUnit_Framework_TestCase
             ->add(new SimplePropertySetter(
                 new PickByClass(\DateTime::class), 
                 new UseSetterMethod("setTimestamp"), 
-                new Directly(123)
+                new UseDirectly(123)
             ))
             ->add(new SimplePropertySetter(
                 new PickByClass(TestClass::class), 
                 new UseSetterMethod("setFirstParam"), 
-                new Directly("firstInput")
+                new UseDirectly("firstInput")
             ))
         ;
         $target = new TestClass();

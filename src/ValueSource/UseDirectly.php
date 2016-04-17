@@ -14,7 +14,7 @@ namespace lukaszmakuch\PropertySetter\ValueSource;
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class Directly implements ValueSource
+class UseDirectly implements ValueSource
 {
     /**
      * @var mixed
