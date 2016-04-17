@@ -17,11 +17,11 @@ use PHPUnit_Framework_TestCase;
 /**
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class ChainOfPropertySettersTest extends PHPUnit_Framework_TestCase
+class SimpleChainOfPropertySettersTest extends PHPUnit_Framework_TestCase
 {
     public function testChaining()
     {
-        $chainedSetters = (new ChainOfPropertySetters())
+        $chainedSetters = (new SimpleChainOfPropertySetters())
             ->add(new SimplePropertySetter(
                 new ByClass(TestClass::class), 
                 new SetterMethod("setFirstParam"), 
