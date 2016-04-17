@@ -16,6 +16,8 @@ namespace lukaszmakuch\PropertySetter;
  */
 class TestClass
 {
-    public $setBySetter;
-    public function setParam($v) { $this->setBySetter = $v; }
+    public $firstParamSetBySetter;
+    public $secondParamSetBySetter;
+    public function setFirstParam($v) { $this->firstParamSetBySetter = $v; }
+    public function setSecondParam($v) { $this->secondParamSetBySetter = $v; }
 }

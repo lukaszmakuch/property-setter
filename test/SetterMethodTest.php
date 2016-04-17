@@ -23,9 +23,9 @@ class SetterMethodTest extends PHPUnit_Framework_TestCase
     {
         $passedToSetter = "passed to setter";
         $obj = new TestClass;
-        $strategy = new SetterMethod("setParam");
+        $strategy = new SetterMethod("setFirstParam");
         $strategy->setAsProperty($passedToSetter, $obj);
-        $this->assertSame($passedToSetter, $obj->setBySetter);
+        $this->assertSame($passedToSetter, $obj->firstParamSetBySetter);
     }
 
     /**
@@ -40,9 +40,9 @@ class SetterMethodTest extends PHPUnit_Framework_TestCase
     public function testCallThatCausesException()
     {
         $exceptionThrownByCallingSetter = new RuntimeException();
-        $strategy = new SetterMethod("setParam");
+        $strategy = new SetterMethod("setFirstParam");
         $obj = $this->getMock(TestClass::class);
-        $obj->method("setParam")
+        $obj->method("setFirstParam")
             ->will($this->throwException($exceptionThrownByCallingSetter));
         $caughtException = null;
         try {

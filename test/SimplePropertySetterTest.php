@@ -27,7 +27,7 @@ class SimplePropertySetterTest extends PHPUnit_Framework_TestCase
     {
         $this->setter = new SimplePropertySetter(
             new ByClass(TestClass::class),
-            new SetterMethod("setParam"),
+            new SetterMethod("setFirstParam"),
             new Directly(123)
         );
     }
@@ -36,7 +36,7 @@ class SimplePropertySetterTest extends PHPUnit_Framework_TestCase
     {
         $target = new TestClass();
         $this->setter->setPropertiesOf($target);
-        $this->assertEquals(123, $target->setBySetter);
+        $this->assertEquals(123, $target->firstParamSetBySetter);
     }
     
     /**
