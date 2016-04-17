@@ -1,0 +1,27 @@
+{
+    "name": "lukaszmakuch/property-setter",
+    "description": "Sets properties of already existing objects.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Łukasz Makuch",
+            "email": "kontakt@lukaszmakuch.pl",
+            "homepage": "http://lukaszmakuch.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "lukaszmakuch\\PropertySetter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "lukaszmakuch\\PropertySetter\\": "test/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "5.3.*"
+    }
+}
