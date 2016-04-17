@@ -12,11 +12,11 @@ namespace lukaszmakuch\PropertySetter\SettingStrategy;
 use lukaszmakuch\PropertySetter\Exception\UnableToSetProperty;
 
 /**
- * Uses a setter in order to set a property.
+ * Calls a setter in order to set a property.
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class UseSetterMethod implements SettingStrategy
+class CallSetterMethod implements SettingStrategy
 {
     private $setterMethodName;
 

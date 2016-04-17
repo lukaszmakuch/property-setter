@@ -10,7 +10,7 @@
 namespace lukaszmakuch\PropertySetter;
 
 use DateTime;
-use lukaszmakuch\PropertySetter\SettingStrategy\UseSetterMethod;
+use lukaszmakuch\PropertySetter\SettingStrategy\CallSetterMethod;
 use PHPUnit_Framework_TestCase;
 use RuntimeException;
 
@@ -23,7 +23,7 @@ class SetterMethodTest extends PHPUnit_Framework_TestCase
     {
         $passedToSetter = "passed to setter";
         $obj = new TestClass;
-        $strategy = new UseSetterMethod("setFirstParam");
+        $strategy = new CallSetterMethod("setFirstParam");
         $strategy->setAsProperty($passedToSetter, $obj);
         $this->assertSame($passedToSetter, $obj->firstParamSetBySetter);
     }
@@ -33,14 +33,14 @@ class SetterMethodTest extends PHPUnit_Framework_TestCase
      */
     public function testErrorWhileCallingSetter()
     {
-        $strategy = new UseSetterMethod("setParam");
+        $strategy = new CallSetterMethod("setParam");
         $strategy->setAsProperty(123, new DateTime());
     }
 
     public function testCallThatCausesException()
     {
         $exceptionThrownByCallingSetter = new RuntimeException();
-        $strategy = new UseSetterMethod("setFirstParam");
+        $strategy = new CallSetterMethod("setFirstParam");
         $obj = $this->getMock(TestClass::class);
         $obj->method("setFirstParam")
             ->will($this->throwException($exceptionThrownByCallingSetter));
