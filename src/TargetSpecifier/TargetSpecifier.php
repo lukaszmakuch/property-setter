@@ -7,7 +7,7 @@
  * @license MIT http://opensource.org/licenses/MIT
  */
 
-namespace lukaszmakuch\PropertySetter;
+namespace lukaszmakuch\PropertySetter\TargetSpecifier;
 
 /**
  * Tells whether an object is a target for setting a property.

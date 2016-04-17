@@ -7,7 +7,7 @@
  * @license MIT http://opensource.org/licenses/MIT
  */
 
-namespace lukaszmakuch\PropertySetter;
+namespace lukaszmakuch\PropertySetter\ValueSource;
 
 use lukaszmakuch\PropertySetter\Exception\UnableToGetValue;
 
