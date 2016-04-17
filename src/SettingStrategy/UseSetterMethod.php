@@ -16,7 +16,7 @@ use lukaszmakuch\PropertySetter\Exception\UnableToSetProperty;
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class SetterMethod implements SettingStrategy
+class UseSetterMethod implements SettingStrategy
 {
     private $setterMethodName;
 

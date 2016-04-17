@@ -9,7 +9,7 @@
 
 namespace lukaszmakuch\PropertySetter;
 
-use lukaszmakuch\PropertySetter\SettingStrategy\SetterMethod;
+use lukaszmakuch\PropertySetter\SettingStrategy\UseSetterMethod;
 use lukaszmakuch\PropertySetter\TargetSpecifier\ByClass;
 use lukaszmakuch\PropertySetter\ValueSource\Directly;
 use PHPUnit_Framework_TestCase;
@@ -24,12 +24,12 @@ class SilentChainOfPropertySettersTest extends PHPUnit_Framework_TestCase
         $chainedSetters = (new SilentChainOfPropertySetters(new SimpleChainOfPropertySetters()))
             ->add(new SimplePropertySetter(
                 new ByClass(\DateTime::class), 
-                new SetterMethod("setTimestamp"), 
+                new UseSetterMethod("setTimestamp"), 
                 new Directly(123)
             ))
             ->add(new SimplePropertySetter(
                 new ByClass(TestClass::class), 
-                new SetterMethod("setFirstParam"), 
+                new UseSetterMethod("setFirstParam"), 
                 new Directly("firstInput")
             ))
         ;
