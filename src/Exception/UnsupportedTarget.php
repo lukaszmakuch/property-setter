@@ -10,7 +10,7 @@
 namespace lukaszmakuch\PropertySetter\Exception;
 
 /**
- * Thrown when a given target object is not supported.
+ * Thrown when trying to set properties of an object that is not supported.
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
