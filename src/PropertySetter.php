@@ -22,7 +22,7 @@ interface PropertySetter
      * @param mixed $object 
      * 
      * @throws UnableToSetProperty
-     * @return PropertySetter self
+     * @return null
      */
     public function setPropertiesOf($object);
 }
