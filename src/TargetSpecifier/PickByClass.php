@@ -14,7 +14,7 @@ namespace lukaszmakuch\PropertySetter\TargetSpecifier;
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class ByClass implements TargetSpecifier
+class PickByClass implements TargetSpecifier
 {
     /**
      * @var String

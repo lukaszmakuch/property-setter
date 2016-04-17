@@ -10,7 +10,7 @@
 namespace lukaszmakuch\PropertySetter;
 
 use DateTime;
-use lukaszmakuch\PropertySetter\TargetSpecifier\ByClass;
+use lukaszmakuch\PropertySetter\TargetSpecifier\PickByClass;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -22,7 +22,7 @@ class ByClassSpecifierTest extends PHPUnit_Framework_TestCase
 {
     public function testTargetByClass()
     {
-        $specifier = new ByClass(DateTime::class);
+        $specifier = new PickByClass(DateTime::class);
         $this->assertTrue($specifier->isTarget(new \DateTime()));
         $this->assertFalse($specifier->isTarget(new \stdClass()));
         $this->assertFalse($specifier->isTarget("not an object"));
