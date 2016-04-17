@@ -10,7 +10,7 @@
 namespace lukaszmakuch\PropertySetter;
 
 /**
- * Ignores situation when some setters doesn't support objects of some type.
+ * Ignores a situation when some setter doesn't support objects of some type.
  * 
  * Tries to set properties using all of its setters.
  * 
