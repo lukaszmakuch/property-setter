@@ -17,9 +17,9 @@ use RuntimeException;
 /**
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class SetterMethodTest extends PHPUnit_Framework_TestCase
+class CallSetterMethodTest extends PHPUnit_Framework_TestCase
 {
-    public function testCorrectFlow()
+    public function testCallingSetter()
     {
         $passedToSetter = "passed to setter";
         $obj = new TestClass;

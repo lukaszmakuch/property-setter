@@ -13,13 +13,13 @@ use lukaszmakuch\PropertySetter\ValueSource\UseDirectly;
 use PHPUnit_Framework_TestCase;
 
 /**
- * Tests direct value source.
+ * Tests using the given value directly.
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class DirectSourceTest extends PHPUnit_Framework_TestCase
+class UseDirectlyTest extends PHPUnit_Framework_TestCase
 {
-    public function testDirectValueSource()
+    public function testUsingDirectly()
     {
         $value = "it's value";
         $valueSource = new UseDirectly($value);

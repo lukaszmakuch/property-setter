@@ -14,13 +14,13 @@ use lukaszmakuch\PropertySetter\TargetSpecifier\PickByClass;
 use PHPUnit_Framework_TestCase;
 
 /**
- * Tests choosing by class.
+ * Tests picking by class.
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class ByClassSpecifierTest extends PHPUnit_Framework_TestCase
+class PickByClassTest extends PHPUnit_Framework_TestCase
 {
-    public function testTargetByClass()
+    public function testPickingByClass()
     {
         $specifier = new PickByClass(DateTime::class);
         $this->assertTrue($specifier->isTarget(new \DateTime()));
