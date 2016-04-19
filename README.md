@@ -64,6 +64,18 @@ use lukaszmakuch\PropertySetter\SettingStrategy\CallSetterMethod;
 
 $strategy = new CallSetterMethod("setParam"); //will call setParam
 ```
+#### CallOnlyMethodAsSetter
+Calls a setter in order to set a property.
+```php
+use lukaszmakuch\PropertySetter\SettingStrategy\CallOnlyMethodAsSetter;
+
+interface ObjectThatHasOnlyOnePublicMethod
+{
+    public function setParam($newValue);
+}
+
+$strategy = new CallOnlyMethodAsSetter(ObjectThatHasOnlyOnePublicMethod::class); //will call setParam
+```
 ### Target specifiers
 #### PickByClass
 Selects targets by their classes.
